@@ -16,4 +16,4 @@ class S3(object):
 
     # Uploads a file to s3
     def read_file(self, file):
-        return self.__bucket.Object(file).get()['Body'].read().decode('utf-8')
+        return self.__bucket.Object(file).get()['Body'].read().decode('latin1')

@@ -15,7 +15,7 @@ def capture_file_content(event, prop):
 def upload_file(event, s3, name, prop, ext):
     content = capture_file_content(event, prop)
     if len(content) > 0:
-        s3.upload_file('{0}/{1}.{2}'.format(name, prop, ext), bytes(content, 'utf-8') )
+        s3.upload_file('{0}/{1}.{2}'.format(name, prop, ext), bytes(content, 'latin1') )
     
 def lambda_handler(event, context):
     response = dict()

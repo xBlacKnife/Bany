@@ -1,5 +1,11 @@
 # Bany API Change log
 
+## Version 0.6.1 - 17 Mar 2021
+
+**Fixes:**
+
+- Encoding fixes for PNG & FLAC binary content
+
 ## Version 0.6.0 - 17 Mar 2021
 
 **New features:**
