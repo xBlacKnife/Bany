@@ -2,12 +2,14 @@
 
 ## AWS Documentation
 
-Documentation
+API Documentation
+API Swagger
 
-## AWS Code
+## AWS Code Backup
 
-Code backup
+Stream download version of: GET Sync API method
 
 ## API Demo
 
-Simple API demo
+Admin api usage scripts 
+Java Client with stream download demo

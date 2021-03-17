@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "200521e8-4d84-48db-b6d5-74e373ef9f56",
+		"name": "BANY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fhbuou21ji.execute-api.eu-west-1.amazonaws.com/prod/",
+					"protocol": "https",
+					"host": [
+						"fhbuou21ji",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Artifacts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "secret",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fhbuou21ji.execute-api.eu-west-1.amazonaws.com/prod/artifact/list",
+					"protocol": "https",
+					"host": [
+						"fhbuou21ji",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"artifact",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sync Download Artifact",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "secret",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sample\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fhbuou21ji.execute-api.eu-west-1.amazonaws.com/prod/artifact",
+					"protocol": "https",
+					"host": [
+						"fhbuou21ji",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"artifact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Artifact",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "secret",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sample\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fhbuou21ji.execute-api.eu-west-1.amazonaws.com/prod/artifact",
+					"protocol": "https",
+					"host": [
+						"fhbuou21ji",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"artifact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Artifact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "secret",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sample\",\r\n    \"description\": \"Sample text\",\r\n    \"image\": \"Sample image\",\r\n    \"audio\": \"Sample audio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fhbuou21ji.execute-api.eu-west-1.amazonaws.com/prod/artifact",
+					"protocol": "https",
+					"host": [
+						"fhbuou21ji",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"artifact"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
