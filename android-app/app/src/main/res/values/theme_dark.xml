@@ -5,8 +5,9 @@
         <!-- Primary brand color. -->
         <item name="android:colorBackground">@color/bany_bg_0</item>
         <item name="colorPrimary">@color/bany_button_bg_0</item>
-        <item name="colorPrimaryVariant">@color/bany_button_border_0</item>
+        <item name="colorPrimaryVariant">@color/bany_bg_0</item>
         <item name="colorOnPrimary">@color/bany_text_0</item>
+        <item name="android:textColor">@color/bany_text_0</item>
 
         <!-- Status bar color. -->
         <item name="windowActionBar">false</item>

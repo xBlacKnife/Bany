@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/MenuFragment">
+    app:startDestination="@id/PreSettingFragment">
 
     <fragment
         android:id="@+id/MenuFragment"
@@ -45,6 +45,15 @@
         tools:layout="@layout/fragment_guided_view" >
         <action
             android:id="@+id/action_GuidedViewFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PreSettingFragment"
+        android:name="es.ucm.bany.PreSettingFragment"
+        android:label="fragment_presettings"
+        tools:layout="@layout/fragment_presettings" >
+        <action
+            android:id="@+id/action_PreSettingFragment_to_MenuFragment"
             app:destination="@id/MenuFragment" />
     </fragment>
 </navigation>

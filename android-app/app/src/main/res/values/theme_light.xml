@@ -7,6 +7,7 @@
         <item name="colorPrimary">@color/bany_button_bg_2</item>
         <item name="colorPrimaryVariant">@color/bany_button_border_2</item>
         <item name="colorOnPrimary">@color/bany_text_2</item>
+        <item name="android:textColor">@color/bany_text_2</item>
 
         <!-- Status bar color. -->
         <item name="windowActionBar">false</item>

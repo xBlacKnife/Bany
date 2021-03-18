@@ -47,26 +47,5 @@ public class MenuFragment extends Fragment {
             }
         });
 
-        view.findViewById(R.id.button_menu_theme_light).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Utils.changeToTheme(getActivity(), Utils.THEME_DEFAULT);
-            }
-        });
-
-        view.findViewById(R.id.button_menu_theme_dark).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Utils.changeToTheme(getActivity(), Utils.THEME_DARK);
-            }
-        });
-
-        view.findViewById(R.id.button_menu_theme_pascal).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Utils.changeToTheme(getActivity(), Utils.THEME_PASCAL);
-            }
-        });
-
     }
 }

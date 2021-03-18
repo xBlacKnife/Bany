@@ -11,13 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteY="363dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/presetting_text_font"
         android:layout_width="193dp"
         android:layout_height="45dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="@string/presetting_font"
         android:textSize="36sp"
@@ -30,7 +31,7 @@
         android:id="@+id/presetting_text_color"
         android:layout_width="193dp"
         android:layout_height="45dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="@string/presetting_color"
         android:textSize="36sp"
@@ -40,11 +41,78 @@
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/text_presseting_example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="132dp"
         android:text="@string/presetting_example"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="131dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_presseting_theme_pascal"
+        android:layout_width="135dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="48dp"
+        android:text="Pascal"
+        android:textSize="24sp"
+        android:theme="@style/Theme.Bany_Pascal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_presseting_theme_light"
+        android:layout_width="135dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Light"
+        android:textSize="24sp"
+        android:theme="@style/Theme.Bany_Light"
+        app:layout_constraintBottom_toTopOf="@+id/button_presseting_theme_pascal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/presetting_text_color"
+        app:layout_constraintVertical_bias="0.76" />
+
+    <Button
+        android:id="@+id/button_presseting_theme_dark"
+        android:layout_width="135dp"
+        android:layout_height="71dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="Dark"
+        android:textSize="24sp"
+        android:theme="@style/Theme.Bany_Dark"
+        app:layout_constraintBottom_toTopOf="@+id/button_presseting_theme_pascal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/presetting_text_color"
+        app:layout_constraintVertical_bias="0.76" />
+
+    <Button
+        android:id="@+id/button_presseting_font_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:text="A-"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_presseting_font_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:text="A+"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.743"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
