@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Bany_Pascal" parent="Theme.MaterialComponents">
+        <!-- Primary brand color. -->
+
+        <item name="android:colorBackground">@color/bany_bg_1</item>
+        <item name="colorPrimary">@color/bany_button_bg_1</item>
+        <item name="colorPrimaryVariant">@color/bany_button_border_1</item>
+        <item name="colorOnPrimary">@color/bany_text_1</item>
+
+        <!-- Status bar color. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Bany_Pascal.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Bany_Pascal.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="Theme.Bany_Pascal.PopupOverlay" parent="ThemeOverlay.AppCompat" />
+
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MenuFragment">
+
+    <fragment
+        android:id="@+id/MenuFragment"
+        android:name="es.ucm.bany.MenuFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_MenuFragment_to_MuseumInfoFragment"
+            app:destination="@id/MuseumInfoFragment" />
+        <action
+            android:id="@+id/action_MenuFragment_to_FreeViewFragment"
+            app:destination="@id/FreeViewFragment" />
+        <action
+            android:id="@+id/action_MenuFragment_to_GuidedViewFragment"
+            app:destination="@id/GuidedViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MuseumInfoFragment"
+        android:name="es.ucm.bany.MuseumInfoFragment"
+        android:label="fragment_museum_info"
+        tools:layout="@layout/fragment_museum_info" >
+        <action
+            android:id="@+id/action_MuseumInfoFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FreeViewFragment"
+        android:name="es.ucm.bany.FreeViewFragment"
+        android:label="fragment_free_view"
+        tools:layout="@layout/fragment_free_view" >
+        <action
+            android:id="@+id/action_FreeViewFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GuidedViewFragment"
+        android:name="es.ucm.bany.GuidedViewFragment"
+        android:label="fragment_guided_view"
+        tools:layout="@layout/fragment_guided_view" >
+        <action
+            android:id="@+id/action_GuidedViewFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+</navigation>
