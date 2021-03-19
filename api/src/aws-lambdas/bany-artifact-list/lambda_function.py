@@ -1,28 +1,47 @@
 import json
 from s3 import S3
 
-def trunc_file_name(file):
-    return file.key.split('/')[0]
-
-def get_root_folders(files):
-    rootFolders = map(trunc_file_name, files)
+def get_artifacts(files):
+    objects = dict()
+    for file in files:
+        tokens = file.key.split('/')
+        artifact = tokens[0]
+        document = tokens[1]
+        
+        if artifact not in objects:
+            objects[artifact] = list()
     
-    return list(set(rootFolders))
+        if len(document) > 0:
+            objects[artifact].append(document)
+    
+    result = list()
+    for key in objects:
+        obj = dict()
+        obj['name'] = key
+        
+        for item in objects[key]:
+            if item.endswith('.txt'):
+                obj['description'] = item
+            elif item.endswith('.png'):
+                obj['image'] = item
+            elif item.endswith('.flac'):    
+                obj['audio'] = item
+        
+        result.append(obj)
+    
+    return result
     
 def lambda_handler(event, context):
     response = dict()
     return_code = 200
 
     try:
-        # List content from s3
         s3 = S3('bany-bucket')
         files = s3.list_folders()
         
-        # Populate response
-        response['artifacts'] = get_root_folders(files)
+        response['artifacts'] = get_artifacts(files)
 
     except Exception as e:
-        # If something goes wrong
         return_code = 500
         response['error'] = str(e)
     
