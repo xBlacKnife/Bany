@@ -1,5 +1,28 @@
 # Bany API Change log
 
+## Version 0.8.0 - 19 Mar 2021
+
+**New features:**
+
+- Android apk demo for testing api & cloudfront
+
+**Deleted features:**
+
+- Administration tool: Non-practical due streaming conditions, direct upload to S3 is the best option
+- API can no longer delete artifacts
+- API can no longer post artifacts
+
+**Changed features:**
+
+- API has only healthcheck and Get methods
+
+## Version 0.7.0 - 17 Mar 2021
+
+**New features:**
+
+-API Administration Tool
+- Post & Get method does not work due to non configurable HTTP limitations of AWS API
+
 ## Version 0.6.1 - 17 Mar 2021
 
 **Fixes:**
