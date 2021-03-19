@@ -44,7 +44,10 @@ public class PreSettingFragment extends Fragment {
         _button_presseting_font_min = (Button) view.findViewById(R.id.button_presseting_font_min);
         _text_presseting_example = (TextView) view.findViewById(R.id.text_presseting_example);
 
+        initFragmentElements();
+    }
 
+    public void initFragmentElements(){
         _button_presseting_theme_light.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
