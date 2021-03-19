@@ -1,0 +1,110 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2021-03-17T21:05:49Z",
+    "title": "Bany",
+    "description": "API used by the Bany Apk. This API provides some usefull information about artifact's file locations in the cloud."
+  },
+  "host": "some.secret.url",
+  "basePath": "/pro",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Checks if the service is avaiable.",
+        "tags": ["Usability"],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/OkSchema"
+            }
+          }
+        }
+      }
+    },
+    "/artifacts": {
+      "get": {
+        "summary": "Returns all the artifact location files.",
+        "tags": ["Artifacts"],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/ArtifactSchema"
+            }
+          },
+          "500": {
+            "description": "500 response",
+            "schema": {
+              "$ref": "#/definitions/ArtifactKoSchema"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "OkSchema": {
+      "type": "object",
+      "title": "Healthcheck",
+      "properties": {
+          "code": {
+            "type": "number",
+            "default": 200
+          }
+      }  
+    },
+    "ArtifactSchema": {
+      "type": "object",
+      "title": "Artifact",
+      "properties": {
+          "code": {
+            "type": "number",
+            "default": 200
+          },
+          "artifacts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "audio": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+      }  
+    },
+    "ArtifactKoSchema": {
+      "type": "object",
+      "title": "Artifact Failed",
+      "properties": {
+          "code": {
+            "type": "number",
+            "default": 500
+          },
+          "error": {
+            "type": "string"
+          }
+      }  
+    }
+  }
+}
