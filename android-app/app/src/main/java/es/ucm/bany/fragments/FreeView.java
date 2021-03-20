@@ -1,4 +1,4 @@
-package es.ucm.bany;
+package es.ucm.bany.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-public class MuseumInfoFragment extends Fragment {
+import es.ucm.bany.R;
+
+public class FreeView extends Fragment {
 
     @Override
     public View onCreateView(
@@ -17,7 +19,7 @@ public class MuseumInfoFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_museum_info, container, false);
+        return inflater.inflate(R.layout.fragment_free_view, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -26,8 +28,8 @@ public class MuseumInfoFragment extends Fragment {
         view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(MuseumInfoFragment.this)
-                        .navigate(R.id.action_MuseumInfoFragment_to_MenuFragment);
+                NavHostFragment.findNavController(FreeView.this)
+                        .navigate(R.id.action_FreeViewFragment_to_MenuFragment);
             }
         });
     }

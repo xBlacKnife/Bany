@@ -1,8 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Bany_Pascal" parent="Theme.MaterialComponents">
+    <style name="Theme.Bany_Pascal_M" parent="Theme.MaterialComponents">
         <!-- Primary brand color. -->
-
         <item name="android:colorBackground">@color/bany_bg_1</item>
         <item name="colorPrimary">@color/bany_button_bg_1</item>
         <item name="colorPrimaryVariant">@color/bany_bg_1</item>
@@ -19,15 +18,18 @@
         <item name="windowNoTitle">true</item>
         <item name="toolbarMuseumLogo">@drawable/light_museum_logo</item>
 
+        <!-- Text -->
+        <item name="android:textSize">20sp</item>
+
     </style>
 
-    <style name="Theme.Bany_Pascal.NoActionBar">
+    <style name="Theme.Bany_Pascal_M.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.Bany_Pascal.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+    <style name="Theme.Bany_Pascal_M.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
 
-    <style name="Theme.Bany_Pascal.PopupOverlay" parent="ThemeOverlay.AppCompat" />
+    <style name="Theme.Bany_Pascal_M.PopupOverlay" parent="ThemeOverlay.AppCompat" />
 
 </resources>

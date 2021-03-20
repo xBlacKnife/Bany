@@ -15,9 +15,20 @@
     <string name="menu_free">Visita Libre</string>
     <string name="menu_guided">Visita Guiada</string>
 
-    <!-- PreSetting -->
-    <string name="presetting_font">FUENTE</string>
-    <string name="presetting_color">COLOR</string>
+    <!-- PreSettingFont -->
+    <string name="pre_setting_font_title">FUENTE</string>
     <string name="presetting_example">Texto de ejemplo...</string>
+
+    <!-- PreSettingColor -->
+    <string name="pre_setting_color_title">COLOR</string>
+    <string name="pre_setting_color_pascal">PASCAL</string>
+    <string name="pre_setting_color_dark">DARK</string>
+    <string name="pre_setting_color_light">LIGHT</string>
+    <string name="pre_setting_text_example">
+        Elige el tema de colores que mejor se adapte a tus gustos y necesidades. Podrás cambiarlo en cualquier momento.
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

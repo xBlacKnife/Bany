@@ -1,4 +1,4 @@
-package es.ucm.bany;
+package es.ucm.bany.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-public class MenuFragment extends Fragment {
+import es.ucm.bany.R;
+
+public class Menu extends Fragment {
 
     @Override
     public View onCreateView(
@@ -26,7 +28,7 @@ public class MenuFragment extends Fragment {
         view.findViewById(R.id.button_menu_info).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(MenuFragment.this)
+                NavHostFragment.findNavController(Menu.this)
                         .navigate(R.id.action_MenuFragment_to_MuseumInfoFragment);
             }
         });
@@ -34,7 +36,7 @@ public class MenuFragment extends Fragment {
         view.findViewById(R.id.button_menu_free).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(MenuFragment.this)
+                NavHostFragment.findNavController(Menu.this)
                         .navigate(R.id.action_MenuFragment_to_FreeViewFragment);
             }
         });
@@ -42,7 +44,7 @@ public class MenuFragment extends Fragment {
         view.findViewById(R.id.button_menu_guided).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(MenuFragment.this)
+                NavHostFragment.findNavController(Menu.this)
                         .navigate(R.id.action_MenuFragment_to_GuidedViewFragment);
             }
         });

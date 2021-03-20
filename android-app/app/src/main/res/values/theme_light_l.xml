@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Bany_Light" parent="Theme.MaterialComponents.Light">
+    <style name="Theme.Bany_Light_L" parent="Theme.MaterialComponents.Light">
 
         <!-- Primary brand color. -->
         <item name="android:colorBackground">@color/bany_bg_2</item>
@@ -18,15 +18,18 @@
         <item name="windowNoTitle">true</item>
         <item name="toolbarMuseumLogo">@drawable/dark_museum_logo</item>
 
+        <!-- Text -->
+        <item name="android:textSize">32sp</item>
+
     </style>
 
-    <style name="Theme.Bany_Light.NoActionBar">
+    <style name="Theme.Bany_Light_L.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.Bany_Light.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+    <style name="Theme.Bany_Light_L.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
 
-    <style name="Theme.Bany_Light.PopupOverlay" parent="ThemeOverlay.AppCompat" />
+    <style name="Theme.Bany_Light_L.PopupOverlay" parent="ThemeOverlay.AppCompat" />
 
 </resources>
