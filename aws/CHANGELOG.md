@@ -1,5 +1,17 @@
 # Bany API Change log
 
+## Version 1.0.0 - 20 Mar 2021
+
+**New features:**
+
+- Documentation
+
+## Version 0.9.0 - 20 Mar 2021
+
+**New features:**
+
+- Android apk demo for testing api & cloudfront
+
 ## Version 0.8.0 - 19 Mar 2021
 
 **New features:**
