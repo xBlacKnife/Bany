@@ -3,12 +3,11 @@ package com.example.awsdemo;
 import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.provider.MediaStore.Audio;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -27,9 +26,11 @@ public class CloudfrontActivity extends AppCompatActivity implements CloudfrontO
     private Spinner artifactSpinner;
     private TextView cloudfrontText;
     private ImageView cloudfrontImage;
-    private LinearLayout audioContainer;
-    private MediaPlayer cloudfrontAudio;
+    private Button mediaPlayerBtn;
+    private MediaPlayer audioPlayer;
+    // State
     private ArtifactController controller;
+    private String selection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +41,8 @@ public class CloudfrontActivity extends AppCompatActivity implements CloudfrontO
         this.artifactSpinner = findViewById(R.id.artifactSpinner);
         this.cloudfrontText = findViewById(R.id.artifactDescription);
         this.cloudfrontImage  = findViewById(R.id.artifactImage);
-        this.audioContainer = findViewById(R.id.artifactAudioContainer);
-        this.cloudfrontAudio = null;
+        this.mediaPlayerBtn = findViewById(R.id.artifactPPBtn);
+        this.audioPlayer = null;
         this.controller = ArtifactController.getInstance();
 
         // Initial View State
@@ -52,7 +53,7 @@ public class CloudfrontActivity extends AppCompatActivity implements CloudfrontO
         this.artifactSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selection = parent.getItemAtPosition(position).toString();
+                selection = parent.getItemAtPosition(position).toString();
 
                 artifactSpinner.setEnabled(false);
                 Cloud.getInstance().downloadArtifact(controller.getArtifact(selection));
@@ -60,6 +61,7 @@ public class CloudfrontActivity extends AppCompatActivity implements CloudfrontO
             @Override
             public void onNothingSelected(AdapterView <?> parent) { }
         });
+        this.selection = null;
         Cloud.getInstance().asCloudObserver().addObserver(this);
     }
 
@@ -67,6 +69,19 @@ public class CloudfrontActivity extends AppCompatActivity implements CloudfrontO
     public void onDestroy() {
         super.onDestroy();
         Cloud.getInstance().asCloudObserver().removeObserver(this);
+    }
+
+    public void onPlayPause(View view) {
+        if (audioPlayer != null) {
+            if (!audioPlayer.isPlaying()) {
+                mediaPlayerBtn.setText("Pause");
+                audioPlayer.start();
+            }
+            else {
+                mediaPlayerBtn.setText("Play");
+                audioPlayer.pause();
+            }
+        }
     }
 
     // CloudfrontObserver
@@ -92,12 +107,12 @@ public class CloudfrontActivity extends AppCompatActivity implements CloudfrontO
     }
 
     @Override
-    public void onCloudfrontAudioDownload(MediaPlayer mplayer) {
+    public void onCloudfrontAudioStream(MediaPlayer player) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                cloudfrontAudio = mplayer;
-                cloudfrontAudio.start();
+                audioPlayer = player;
+                mediaPlayerBtn.setText("Ready!");
             }
         });
     }

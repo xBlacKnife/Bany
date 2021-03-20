@@ -22,9 +22,10 @@ public class Cloud {
 
     // Attributes
     // ------------------------------------------------------
-    private final static String API = "";
-    protected final static String AWS_HEALTHCHECK = API;
-    protected final static String AWS_ARTIFACTS = API + "/artifacts";
+    private final static String AWS_API = "https://secret";
+    private final static String AWS_CLOUDFRONT = "https://secret";
+    private final static String AWS_HEALTHCHECK = AWS_API;
+    private final static String AWS_ARTIFACTS = AWS_API + "/artifacts";
 
     // Cloud observers
     private ArrayList<ApiObserver> apiObservers;
@@ -50,15 +51,7 @@ public class Cloud {
     public void downloadArtifact(Artifact a) {
         if (a == null) return;
 
-        if (a.descriptionFile() != null) {
-            // TODO request text
-        }
-        if (a.imageFile() != null) {
-            // TODO request image
-        }
-        if (a.audioFile() != null) {
-            // TODO request audio
-        }
+        new DownloadArtifact(AWS_CLOUDFRONT, a).execute();
     }
 
     // API Notifications
@@ -115,10 +108,10 @@ public class Cloud {
         }
     }
 
-    protected void notifyAudioDownload(MediaPlayer mplayer) {
+    protected void notifyAudioStream(MediaPlayer player) {
         clearCloudfrontNullPointers();
         for (CloudfrontObserver o : cloudfrontObservers) {
-            o.onDownloadComplete();
+            o.onCloudfrontAudioStream(player);
         }
     }
 

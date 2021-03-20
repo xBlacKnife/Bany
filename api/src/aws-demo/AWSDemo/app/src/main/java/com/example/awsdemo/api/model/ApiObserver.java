@@ -1,6 +1,5 @@
 package com.example.awsdemo.api.model;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public interface ApiObserver {

@@ -1,7 +1,5 @@
 package com.example.awsdemo.api.model.requests;
 
-import android.util.Log;
-
 import com.example.awsdemo.api.model.Artifact;
 import com.example.awsdemo.api.model.response.GetArtifactsJsonParser;
 
