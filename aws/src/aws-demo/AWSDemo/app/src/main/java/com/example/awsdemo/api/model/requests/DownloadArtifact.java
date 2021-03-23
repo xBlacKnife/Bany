@@ -64,10 +64,13 @@ public class DownloadArtifact extends Request<String, Void, String> {
     }
 
     private void requestAudio() throws IOException {
-        String file = String.format("%s/%s/%s", endpoint, artifact.name(), artifact.audioFile());
-        MusicPlayer player = new MusicPlayer(file);
-        player.capture(artifact);
+        MusicPlayer player = null;
+        if (artifact.audioFile() != null) {
+            String file = String.format("%s/%s/%s", endpoint, artifact.name(), artifact.audioFile());
 
+            player = new MusicPlayer(file);
+            player.capture(artifact);
+        }
         Cloud.getInstance().notifyAudioStream(player);
     }
 

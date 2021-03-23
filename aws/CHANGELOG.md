@@ -1,5 +1,11 @@
 # Bany API Change log
 
+## Version 1.0.1 - 23 Mar 2021
+
+**Bug fixes:**
+
+- Fixed the audio download event to prevent NullPointerException when no audio file is provided by cloudfront
+
 ## Version 1.0.0 - 20 Mar 2021
 
 **New features:**
