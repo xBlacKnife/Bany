@@ -67,7 +67,7 @@ public class PreSettingFont extends Fragment {
 
                 int size = Utils.getFontSizeTheme();
                 if(size > Utils.FONT_S){
-                    Utils.setFontSizeTheme(getActivity(), size + 1);
+                    Utils.setFontSizeTheme(getActivity(), size - 1);
                 }
             }
         });
