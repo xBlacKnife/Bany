@@ -13,9 +13,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import es.ucm.bany.api.control.ArtifactController;
-import es.ucm.bany.api.model.CloudfrontObserver;
-import es.ucm.bany.api.model.requests.Cloud;
+import es.ucm.bany.aws.control.ArtifactController;
+import es.ucm.bany.aws.model.CloudfrontObserver;
+import es.ucm.bany.aws.model.requests.Cloud;
 
 import java.util.ArrayList;
 

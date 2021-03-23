@@ -1,4 +1,4 @@
-package es.ucm.bany.api.model.requests;
+package es.ucm.bany.aws.model.requests;
 
 class Healthcheck extends Request<String, Void, String> {
 

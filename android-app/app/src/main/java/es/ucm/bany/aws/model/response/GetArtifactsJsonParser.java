@@ -1,6 +1,6 @@
-package es.ucm.bany.api.model.response;
+package es.ucm.bany.aws.model.response;
 
-import es.ucm.bany.api.model.Artifact;
+import es.ucm.bany.aws.model.Artifact;
 
 import org.json.JSONArray;
 import org.json.JSONException;

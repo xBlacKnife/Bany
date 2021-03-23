@@ -1,11 +1,11 @@
-package es.ucm.bany.api.model.requests;
+package es.ucm.bany.aws.model.requests;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 
-import es.ucm.bany.api.model.Artifact;
+import es.ucm.bany.aws.model.Artifact;
 
 import java.io.IOException;
 import java.io.InputStream;
