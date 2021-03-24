@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/PreSettingColorFragment">
+    app:startDestination="@id/ArtifactInfoFragment">
 
     <fragment
         android:id="@+id/MenuFragment"
@@ -61,4 +61,9 @@
             android:id="@+id/action_PreSettingColorFragment_to_PreSettingFontFragment"
             app:destination="@id/PreSettingFontFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/ArtifactInfoFragment"
+        android:name="es.ucm.bany.fragments.ArtifactInfo"
+        android:label="fragment_artifact_info"
+        tools:layout="@layout/fragment_artifact_info" />
 </navigation>
