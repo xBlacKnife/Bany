@@ -1,4 +1,4 @@
-package es.ucm.bany.api.model;
+package es.ucm.bany.aws.model;
 
 import java.io.Serializable;
 

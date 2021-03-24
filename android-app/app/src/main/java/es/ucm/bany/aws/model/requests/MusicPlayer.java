@@ -1,9 +1,9 @@
-package es.ucm.bany.api.model.requests;
+package es.ucm.bany.aws.model.requests;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 
-import es.ucm.bany.api.model.Artifact;
+import es.ucm.bany.aws.model.Artifact;
 
 public class MusicPlayer extends MediaPlayer {
 

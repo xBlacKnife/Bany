@@ -1,4 +1,4 @@
-package es.ucm.bany.api.model.requests;
+package es.ucm.bany.aws.model.requests;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;

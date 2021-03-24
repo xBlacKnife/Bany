@@ -1,4 +1,4 @@
-package es.ucm.bany.api.model.requests;
+package es.ucm.bany.aws.model.requests;
 
 import android.os.AsyncTask;
 import android.util.Log;

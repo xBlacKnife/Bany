@@ -1,12 +1,12 @@
-package es.ucm.bany.api.model.requests;
+package es.ucm.bany.aws.model.requests;
 
 import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 
-import es.ucm.bany.api.model.ApiObserver;
-import es.ucm.bany.api.model.Artifact;
-import es.ucm.bany.api.model.CloudfrontObserver;
-import es.ucm.bany.api.model.Observable;
+import es.ucm.bany.aws.model.ApiObserver;
+import es.ucm.bany.aws.model.Artifact;
+import es.ucm.bany.aws.model.CloudfrontObserver;
+import es.ucm.bany.aws.model.Observable;
 
 import java.util.ArrayList;
 import java.util.Collections;

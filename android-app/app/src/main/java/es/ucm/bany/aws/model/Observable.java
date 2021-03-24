@@ -1,4 +1,4 @@
-package es.ucm.bany.api.model;
+package es.ucm.bany.aws.model;
 
 // Generic interface for the Observable pattern.
 public interface Observable<T> {

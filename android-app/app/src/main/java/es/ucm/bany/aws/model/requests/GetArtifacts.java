@@ -1,7 +1,7 @@
-package es.ucm.bany.api.model.requests;
+package es.ucm.bany.aws.model.requests;
 
-import es.ucm.bany.api.model.Artifact;
-import es.ucm.bany.api.model.response.GetArtifactsJsonParser;
+import es.ucm.bany.aws.model.Artifact;
+import es.ucm.bany.aws.model.response.GetArtifactsJsonParser;
 
 import java.util.HashMap;
 

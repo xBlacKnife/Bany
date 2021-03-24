@@ -1,11 +1,11 @@
-package es.ucm.bany.api.model.requests;
+package es.ucm.bany.aws.model.requests;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 
-import es.ucm.bany.api.model.Artifact;
+import es.ucm.bany.aws.model.Artifact;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -64,10 +64,13 @@ public class DownloadArtifact extends Request<String, Void, String> {
     }
 
     private void requestAudio() throws IOException {
-        String file = String.format("%s/%s/%s", endpoint, artifact.name(), artifact.audioFile());
-        MusicPlayer player = new MusicPlayer(file);
-        player.capture(artifact);
+        MusicPlayer player = null;
+        if (artifact.audioFile() != null) {
+            String file = String.format("%s/%s/%s", endpoint, artifact.name(), artifact.audioFile());
 
+            player = new MusicPlayer(file);
+            player.capture(artifact);
+        }
         Cloud.getInstance().notifyAudioStream(player);
     }
 

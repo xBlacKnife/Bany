@@ -1,9 +1,9 @@
-package es.ucm.bany.api.control;
+package es.ucm.bany.aws.control;
 
 
-import es.ucm.bany.api.model.Artifact;
-import es.ucm.bany.api.model.ApiObserver;
-import es.ucm.bany.api.model.requests.Cloud;
+import es.ucm.bany.aws.model.Artifact;
+import es.ucm.bany.aws.model.ApiObserver;
+import es.ucm.bany.aws.model.requests.Cloud;
 
 import java.util.ArrayList;
 import java.util.HashMap;

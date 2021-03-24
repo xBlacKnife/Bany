@@ -11,10 +11,10 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import es.ucm.bany.api.control.ArtifactController;
-import es.ucm.bany.api.model.ApiObserver;
-import es.ucm.bany.api.model.Artifact;
-import es.ucm.bany.api.model.requests.Cloud;
+import es.ucm.bany.aws.control.ArtifactController;
+import es.ucm.bany.aws.model.ApiObserver;
+import es.ucm.bany.aws.model.Artifact;
+import es.ucm.bany.aws.model.requests.Cloud;
 
 
 import java.util.ArrayList;
