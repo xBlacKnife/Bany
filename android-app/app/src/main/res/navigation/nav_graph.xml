@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/ArtifactInfoFragment">
+    app:startDestination="@id/PreSettingColorFragment">
 
     <fragment
         android:id="@+id/MenuFragment"
@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_FreeViewFragment_to_MenuFragment"
             app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/action_FreeViewFragment_to_ArtifactInfoFragment"
+            app:destination="@id/ArtifactInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/GuidedViewFragment"
@@ -51,7 +54,11 @@
         android:id="@+id/PreSettingFontFragment"
         android:name="es.ucm.bany.fragments.PreSettingFont"
         android:label="fragment_pre_setting_font"
-        tools:layout="@layout/fragment_pre_setting_font" />
+        tools:layout="@layout/fragment_pre_setting_font" >
+        <action
+            android:id="@+id/action_PreSettingFontFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/PreSettingColorFragment"
         android:name="es.ucm.bany.fragments.PreSettingColor"
