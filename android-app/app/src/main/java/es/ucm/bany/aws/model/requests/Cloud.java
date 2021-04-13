@@ -22,8 +22,8 @@ public class Cloud {
 
     // Attributes
     // ------------------------------------------------------
-    private final static String AWS_API = "https://secret";
-    private final static String AWS_CLOUDFRONT = "https://secret";
+    private final static String AWS_API = "https://fhbuou21ji.execute-api.eu-west-1.amazonaws.com/pro";
+    private final static String AWS_CLOUDFRONT = "https://d2zuas8e2dv0g1.cloudfront.net";
     private final static String AWS_HEALTHCHECK = AWS_API;
     private final static String AWS_ARTIFACTS = AWS_API + "/artifacts";
 

@@ -8,14 +8,13 @@ import android.widget.GridView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import es.ucm.bany.R;
-import es.ucm.bany.cars.CarAdapter;
+import es.ucm.bany.artifacts.ArtifactAdapter;
 
 public class FreeView extends Fragment {
 
-    CarAdapter _carAdapter;
+    ArtifactAdapter _artifactAdapter;
 
     @Override
     public View onCreateView(
@@ -30,8 +29,8 @@ public class FreeView extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         GridView gridView = (GridView) view.findViewById(R.id.grid);
-        CarAdapter carAdapter = new CarAdapter(getContext());
-        gridView.setAdapter(carAdapter);
+        ArtifactAdapter artifactAdapter = new ArtifactAdapter(getContext());
+        gridView.setAdapter(artifactAdapter);
     }
 }
 

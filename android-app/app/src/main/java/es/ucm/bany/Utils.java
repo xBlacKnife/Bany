@@ -79,39 +79,5 @@ public class Utils
     public static void onActivityCreateSetTheme(Activity activity)
     {
         activity.setTheme(_theme);
-
-        /*switch (sTheme)
-        {
-            default:
-            case THEME_DEFAULT:
-                activity.setTheme(R.style.Theme_Bany_Pascal_S);
-                break;
-            case THEME_DARK_S:
-                activity.setTheme(R.style.Theme_Bany_Dark_S);
-                break;
-            case THEME_LIGHT_S:
-                activity.setTheme(R.style.Theme_Bany_Light_S);
-                break;
-
-            case THEME_DEFAULT_M:
-                activity.setTheme(R.style.Theme_Bany_Pascal_M);
-                break;
-            case THEME_DARK_M:
-                activity.setTheme(R.style.Theme_Bany_Dark_M);
-                break;
-            case THEME_LIGHT_M:
-                activity.setTheme(R.style.Theme_Bany_Light_M);
-                break;
-
-            case THEME_DEFAULT_L:
-                activity.setTheme(R.style.Theme_Bany_Pascal_L);
-                break;
-            case THEME_DARK_L:
-                activity.setTheme(R.style.Theme_Bany_Dark_L);
-                break;
-            case THEME_LIGHT_L:
-                activity.setTheme(R.style.Theme_Bany_Light_L);
-                break;
-        }*/
     }
 }

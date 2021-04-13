@@ -1,27 +1,32 @@
 package es.ucm.bany;
 
-import android.content.res.Resources;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.ThemeUtils;
 import androidx.appcompat.widget.Toolbar;
-
-import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+
+import es.ucm.bany.aws.control.ArtifactController;
+import es.ucm.bany.aws.model.requests.Cloud;
+import es.ucm.bany.fragments.ArtifactInfo;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static boolean requested = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Create Controller
+        ArtifactController.getInstance();
+
+        // Locate artifacts
+        if (!requested) {
+            requested = true;
+            Cloud.getInstance().doGetArtifacts();
+        }
         Utils.onActivityCreateSetTheme(this);
 
         setContentView(R.layout.activity_main);
@@ -29,15 +34,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+    }
 
-        /*FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (ArtifactInfo.cloudAudioPlayer != null) {
+            ArtifactInfo.cloudAudioPlayer.stop();
+            ArtifactInfo.cloudAudioPlayer.release();
+        }
     }
 
     @Override
