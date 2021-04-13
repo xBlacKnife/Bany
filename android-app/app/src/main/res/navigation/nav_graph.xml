@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/PreSettingColorFragment">
+
+    <fragment
+        android:id="@+id/MenuFragment"
+        android:name="es.ucm.bany.fragments.Menu"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_MenuFragment_to_MuseumInfoFragment"
+            app:destination="@id/MuseumInfoFragment" />
+        <action
+            android:id="@+id/action_MenuFragment_to_FreeViewFragment"
+            app:destination="@id/FreeViewFragment" />
+        <action
+            android:id="@+id/action_MenuFragment_to_GuidedViewFragment"
+            app:destination="@id/GuidedViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MuseumInfoFragment"
+        android:name="es.ucm.bany.fragments.MuseumInfo"
+        android:label="fragment_museum_info"
+        tools:layout="@layout/fragment_museum_info" >
+        <action
+            android:id="@+id/action_MuseumInfoFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FreeViewFragment"
+        android:name="es.ucm.bany.fragments.FreeView"
+        android:label="fragment_free_view"
+        tools:layout="@layout/fragment_free_view" >
+        <action
+            android:id="@+id/action_FreeViewFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/action_FreeViewFragment_to_ArtifactInfoFragment"
+            app:destination="@id/ArtifactInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GuidedViewFragment"
+        android:name="es.ucm.bany.fragments.GuidedView"
+        android:label="fragment_guided_view"
+        tools:layout="@layout/fragment_guided_view" >
+        <action
+            android:id="@+id/action_GuidedViewFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PreSettingFontFragment"
+        android:name="es.ucm.bany.fragments.PreSettingFont"
+        android:label="fragment_pre_setting_font"
+        tools:layout="@layout/fragment_pre_setting_font" >
+        <action
+            android:id="@+id/action_PreSettingFontFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PreSettingColorFragment"
+        android:name="es.ucm.bany.fragments.PreSettingColor"
+        android:label="fragment_pre_setting_color"
+        tools:layout="@layout/fragment_pre_setting_color" >
+        <action
+            android:id="@+id/action_PreSettingColorFragment_to_PreSettingFontFragment"
+            app:destination="@id/PreSettingFontFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ArtifactInfoFragment"
+        android:name="es.ucm.bany.fragments.ArtifactInfo"
+        android:label="fragment_artifact_info"
+        tools:layout="@layout/fragment_artifact_info" />
+</navigation>

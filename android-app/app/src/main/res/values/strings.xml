@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Bany</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Menu -->
+    <string name="menu_info">Información</string>
+    <string name="menu_free">Visita Libre</string>
+    <string name="menu_guided">Visita Guiada</string>
+
+    <!-- PreSettingFont -->
+    <string name="pre_setting_font_title">FUENTE</string>
+    <string name="presetting_example">Texto de ejemplo...</string>
+
+    <!-- PreSettingColor -->
+    <string name="pre_setting_color_title">COLOR</string>
+    <string name="pre_setting_color_pascal">PASCAL</string>
+    <string name="pre_setting_color_dark">DARK</string>
+    <string name="pre_setting_color_light">LIGHT</string>
+    <string name="pre_setting_text_example">
+        Elige el tema de colores que mejor se adapte a tus gustos y necesidades. Podrás cambiarlo en cualquier momento.
+    </string>
+
+    <string name="yoshi_description">Yoshi, es un dinosaurio híbrido antropomórfico perteneciente a la franquicia de <b>Super Mario</b>, el cual también cuenta con su propia serie de juegos.
+        El nombre completo de Yoshi (dado oficialmente por Nintendo) es Yoshisaur T. Munchakoopas. Él desciende de la especie de Yoshis, individuos que aparecen en varios colores, y siendo este personaje principal de color verde.
+        Yoshi apareció por primera vez en el juego Super Mario World (1990) de la consola SNES, como compañero de Mario y Luigi, y más tarde protagonizó en juegos de plataforma y de lógica siendo Yoshi\'s Island, Yoshi\'s Cookie, Yoshi\'s Story y Yoshi\'s Woolly World. Yoshi también ha aparecido en muchas de las series spin-off de Super Mario como Mario Kart, Mario Party, y Super Smash Bros., así como en varios juegos deportivos de la franquicia.</string>
+
+</resources>

@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Bany_Light_M" parent="Theme.MaterialComponents.Light">
+
+        <!-- Primary brand color. -->
+        <item name="android:colorBackground">@color/bany_bg_2</item>
+        <item name="colorPrimary">@color/bany_button_bg_2</item>
+        <item name="colorPrimaryVariant">@color/bany_button_border_2</item>
+        <item name="colorOnPrimary">@color/bany_text_2</item>
+        <item name="android:textColor">@color/bany_text_2</item>
+
+        <item name="colorSecondary">@color/bany_button_bg_2</item>
+        <item name="colorSecondaryVariant">@color/bany_bg_2</item>
+        <item name="colorOnSecondary">@color/bany_text_2</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+        <!-- Tool Bar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="toolbarMuseumLogo">@drawable/dark_museum_logo</item>
+
+        <!-- Text -->
+        <item name="android:textSize">20sp</item>
+
+    </style>
+
+    <style name="Theme.Bany_Light_M.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Bany_Light_M.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="Theme.Bany_Light_M.PopupOverlay" parent="ThemeOverlay.AppCompat" />
+
+</resources>
