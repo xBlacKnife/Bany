@@ -1,4 +1,4 @@
-package es.ucm.bany.cars;
+package es.ucm.bany.classes;
 
 import android.content.Context;
 import android.view.LayoutInflater;

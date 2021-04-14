@@ -1,4 +1,4 @@
-package es.ucm.bany.cars;
+package es.ucm.bany.classes;
 
 import es.ucm.bany.R;
 

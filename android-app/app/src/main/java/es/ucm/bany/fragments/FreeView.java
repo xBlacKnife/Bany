@@ -8,10 +8,9 @@ import android.widget.GridView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import es.ucm.bany.R;
-import es.ucm.bany.cars.CarAdapter;
+import es.ucm.bany.classes.CarAdapter;
 
 public class FreeView extends Fragment {
 
