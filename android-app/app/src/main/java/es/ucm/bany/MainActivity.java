@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 
 import es.ucm.bany.aws.control.ArtifactController;
 import es.ucm.bany.aws.model.requests.Cloud;

@@ -20,7 +20,7 @@
         <!-- Tool Bar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="toolbarMuseumLogo">@drawable/light_museum_logo</item>
+        <item name="toolbarMuseumLogo">@drawable/light_ucm_logo</item>
 
         <!-- Text -->
         <item name="android:textSize">14sp</item>
