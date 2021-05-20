@@ -2,9 +2,9 @@ package es.ucm.bany.fragments;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.os.Build;
@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -145,7 +146,7 @@ public class ArtifactInfo extends Fragment implements CloudfrontObserver {
                     if (itemIndex > 0) {
                         if (cloudAudioPlayer != null) cloudAudioPlayer.stop();
                         Fragment artifactView = new ArtifactInfo(itemIndex - 1, false);
-                        FragmentManager fragmentManager = ((MainActivity) view.getContext()).getFragmentManager();
+                        FragmentManager fragmentManager = ((MainActivity) view.getContext()).getSupportFragmentManager();
                         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
                         transaction.replace(R.id.artifact_info, artifactView);
@@ -162,7 +163,7 @@ public class ArtifactInfo extends Fragment implements CloudfrontObserver {
                         if (cloudAudioPlayer != null) cloudAudioPlayer.stop();
 
                         Fragment artifactView = new ArtifactInfo(itemIndex + 1, false);
-                        FragmentManager fragmentManager = ((MainActivity) view.getContext()).getFragmentManager();
+                        FragmentManager fragmentManager = ((MainActivity) view.getContext()).getSupportFragmentManager();
                         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
                         transaction.replace(R.id.artifact_info, artifactView);
@@ -173,6 +174,34 @@ public class ArtifactInfo extends Fragment implements CloudfrontObserver {
             });
         }
 
+        getView().setFocusableInTouchMode(true);
+        getView().requestFocus();
+        getView().setOnKeyListener( new View.OnKeyListener()
+        {
+            @Override
+            public boolean onKey( View v, int keyCode, KeyEvent event )
+            {
+                if( keyCode == KeyEvent.KEYCODE_BACK )
+                {
+                    cloudAudioPlayer.stop();
+                    FragmentManager fragmentManager = ((MainActivity) v.getContext()).getSupportFragmentManager();
+                    FragmentTransaction transaction = fragmentManager.beginTransaction();
+                    if(free){
+                        Fragment freeview = new FreeView();
+                        transaction.replace(R.id.free_view, freeview);
+                    }
+                    else{
+                        Fragment guidedview = new GuidedView();
+                        transaction.replace(R.id.guided_view, guidedview);
+                    }
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+
+                    return true;
+                }
+                return false;
+            }
+        } );
 
     }
 

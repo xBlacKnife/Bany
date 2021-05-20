@@ -1,23 +1,15 @@
 package es.ucm.bany.artifacts;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.media.Image;
-import android.os.AsyncTask;
-import android.os.Handler;
-import android.os.Looper;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import android.app.Fragment;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -85,7 +77,7 @@ public class ArtifactAdapter extends BaseAdapter {
             @Override
             public void onClick(View arg0) {
                 Fragment artifactView = new ArtifactInfo(position, true);
-                FragmentManager fragmentManager = ((MainActivity) context).getFragmentManager();
+                FragmentManager fragmentManager = ((MainActivity) context).getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
 
                 transaction.replace(R.id.free_view, artifactView);

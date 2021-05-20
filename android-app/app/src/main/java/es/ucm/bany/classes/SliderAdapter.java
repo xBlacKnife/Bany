@@ -1,8 +1,8 @@
 package es.ucm.bany.classes;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,7 +68,7 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
                 @Override
                 public void onClick(View arg0) {
                     Fragment artifactView = new ArtifactInfo(0, false);
-                    FragmentManager fragmentManager = ((MainActivity) view.getContext()).getFragmentManager();
+                    FragmentManager fragmentManager = ((MainActivity) view.getContext()).getSupportFragmentManager();
                     FragmentTransaction transaction = fragmentManager.beginTransaction();
 
                     transaction.replace(R.id.guided_view, artifactView);
