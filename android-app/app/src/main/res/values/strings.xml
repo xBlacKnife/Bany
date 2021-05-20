@@ -27,6 +27,9 @@
     <string name="pre_setting_text_example">
         Elige el tema de colores que mejor se adapte a tus gustos y necesidades. Podrás cambiarlo en cualquier momento.
     </string>
+    <string name="pre_setting_font_text">
+        Elige el tamaño de letra que mejor se adapte a tus gustos y necesidades. Podrás cambiarlo en cualquier momento.
+    </string>
 
     <!-- MuseumInfo -->
     <string name="museum_name">Museo de Informática García Santesmases</string>
