@@ -3,7 +3,13 @@ package es.ucm.bany.artifacts;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.media.Image;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +19,28 @@ import android.widget.TextView;
 
 import android.app.Fragment;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
+
+import com.bumptech.glide.Glide;
+import com.makeramen.roundedimageview.RoundedImageView;
+
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import es.ucm.bany.MainActivity;
 import es.ucm.bany.R;
+import es.ucm.bany.classes.SliderItem;
 import es.ucm.bany.fragments.ArtifactInfo;
 
 public class ArtifactAdapter extends BaseAdapter {
     private Context context;
+
+    private ImageView artifactImage;
+    private TextView artifactText;
+
 
     public ArtifactAdapter(Context context) {
         this.context = context;
@@ -45,19 +67,24 @@ public class ArtifactAdapter extends BaseAdapter {
         if (view == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.grid_item, viewGroup, false);
-        }
-        final ArtifactViewItem item = getItem(position);
 
-        ImageView artifactImage = (ImageView) view.findViewById(R.id.imagen_coche);
-        TextView artifactText = (TextView) view.findViewById(R.id.nombre_coche);
-        artifactImage.setImageResource(item.getIdDrawable());
+            artifactImage = (ImageView) view.findViewById(R.id.imagen_coche);
+            artifactText = (TextView) view.findViewById(R.id.nombre_coche);
+        }
+
+        final ArtifactViewItem item = getItem(position);
         artifactText.setText(item.getNombre());
-        artifactText.setTextColor(Color.WHITE);
+        artifactText.getBackground().setAlpha(200);
+
+        Glide.with(artifactImage.getContext())
+                .load(item.getIdDrawable())
+                .into(artifactImage);
+
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Fragment artifactView = new ArtifactInfo(item);
+                Fragment artifactView = new ArtifactInfo(position, true);
                 FragmentManager fragmentManager = ((MainActivity) context).getFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
 
@@ -70,3 +97,5 @@ public class ArtifactAdapter extends BaseAdapter {
     }
 
 }
+
+

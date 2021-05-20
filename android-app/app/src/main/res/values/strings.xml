@@ -4,8 +4,8 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
@@ -35,6 +35,8 @@
     <string name="yoshi_description">Yoshi, es un dinosaurio híbrido antropomórfico perteneciente a la franquicia de <b>Super Mario</b>, el cual también cuenta con su propia serie de juegos.
         El nombre completo de Yoshi (dado oficialmente por Nintendo) es Yoshisaur T. Munchakoopas. Él desciende de la especie de Yoshis, individuos que aparecen en varios colores, y siendo este personaje principal de color verde.
         Yoshi apareció por primera vez en el juego Super Mario World (1990) de la consola SNES, como compañero de Mario y Luigi, y más tarde protagonizó en juegos de plataforma y de lógica siendo Yoshi\'s Island, Yoshi\'s Cookie, Yoshi\'s Story y Yoshi\'s Woolly World. Yoshi también ha aparecido en muchas de las series spin-off de Super Mario como Mario Kart, Mario Party, y Super Smash Bros., así como en varios juegos deportivos de la franquicia.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

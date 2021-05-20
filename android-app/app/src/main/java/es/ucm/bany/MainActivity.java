@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         if (ArtifactInfo.cloudAudioPlayer != null) {
-            ArtifactInfo.cloudAudioPlayer.stop();
+            //ArtifactInfo.cloudAudioPlayer.stop();
             ArtifactInfo.cloudAudioPlayer.release();
         }
     }

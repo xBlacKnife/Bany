@@ -35,17 +35,20 @@
         android:label="fragment_free_view"
         tools:layout="@layout/fragment_free_view" >
         <action
-            android:id="@+id/action_FreeViewFragment_to_MenuFragment"
-            app:destination="@id/MenuFragment" />
-        <action
             android:id="@+id/action_FreeViewFragment_to_ArtifactInfoFragment"
             app:destination="@id/ArtifactInfoFragment" />
+        <action
+            android:id="@+id/action_FreeViewFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/GuidedViewFragment"
         android:name="es.ucm.bany.fragments.GuidedView"
         android:label="fragment_guided_view"
         tools:layout="@layout/fragment_guided_view" >
+        <action
+            android:id="@+id/action_GuidedViewFragment_to_ArtifactInfoFragment"
+            app:destination="@id/ArtifactInfoFragment" />
         <action
             android:id="@+id/action_GuidedViewFragment_to_MenuFragment"
             app:destination="@id/MenuFragment" />
@@ -72,5 +75,13 @@
         android:id="@+id/ArtifactInfoFragment"
         android:name="es.ucm.bany.fragments.ArtifactInfo"
         android:label="fragment_artifact_info"
-        tools:layout="@layout/fragment_artifact_info" />
+        tools:layout="@layout/fragment_artifact_info" >
+        <action
+            android:id="@+id/action_ArtifactInfoFragment_to_FreeViewFragment"
+            app:destination="@id/FreeViewFragment" />
+        <action
+            android:id="@+id/action_ArtifactInfoFragment_to_GuidedViewFragment"
+            app:destination="@id/GuidedViewFragment" />
+    </fragment>
+
 </navigation>

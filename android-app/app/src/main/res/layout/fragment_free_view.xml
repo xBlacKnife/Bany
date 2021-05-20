@@ -16,5 +16,6 @@
         android:horizontalSpacing="8dp"
         android:numColumns="auto_fit"
         android:padding="8dp"
-        android:verticalSpacing="8dp" />
+        android:verticalSpacing="8dp" >
+    </GridView>
 </RelativeLayout>

@@ -3,5 +3,6 @@
 
     <!-- Other values-->
     <attr name="toolbarMuseumLogo" format="reference" />
+    <attr name="menuImage" format="reference"/>
 
 </resources>
